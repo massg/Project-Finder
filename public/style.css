@@ -1,0 +1,47 @@
+h1 {
+    color: darkblue;
+    margin-left: 350px;
+    margin-top: 100px;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    font-size: 50px;
+}
+
+p {
+    margin-left: 450px;
+    margin-top: 15px;
+}
+
+
+.btn {
+    display: flex;
+    justify-content: center;
+}
+
+button {
+    border-radius: 5px;
+    border: 1px solid grey;
+    color: rgb(8, 100, 43);
+    height: 35px;
+    width: 120px;
+}
+
+nav {
+    background-color: peachpuff;
+    padding: .5em;
+    top: 0;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+ul {
+    display: flex;
+    align-content: center;
+}
+
+li {
+    margin: 5px;
+}
