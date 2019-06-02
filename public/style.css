@@ -105,3 +105,21 @@ button:hover {
     filter: drop-shadow(0 0 0.50rem rgb(194, 194, 194));
     cursor: pointer;
 }
+
+.align {
+    display: flex;
+    justify-content: center;
+    background-color: rgb(230, 105, 105);
+    margin: 40px;
+    padding: 20px;
+    filter: drop-shadow(0 0 0.50rem rgb(100, 98, 98));
+}
+
+.align1 {
+    margin-left: 70vh;
+}
+
+::placeholder {
+    font-size: 20px;
+    padding: 15px;
+}
