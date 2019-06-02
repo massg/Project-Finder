@@ -95,3 +95,9 @@ body {
 .details p {
     margin: 30px;
 }
+
+.stk {
+    position: sticky;
+    margin-left: 200vh;
+    margin-top: 60vh; 
+}
