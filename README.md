@@ -14,3 +14,9 @@ It will also benefit us as we are putting technology to good use.
 ![screenshot1](images/2.png)
 ![screenshot1](images/3.png)
 ![screenshot1](images/4.png)
+
+### Setting up
+* Clone from https://github.com/massg/Project-Finder.git
+* Install Node.js, ejs, MongoJS, express.
+* Go to the directory- Project-Finder and run the following command: 
+`node ProFin.js`
