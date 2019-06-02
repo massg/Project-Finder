@@ -3,7 +3,7 @@ const app = express();
 var mongojs = require('mongojs');
 var request = require('request');
 var db = mongojs('mongodb://Sree:sree@cluster0-shard-00-00-9o2kr.mongodb.net:27017/ProjectFinder?ssl=true&replicaSet=Cluster0-shard-0&authSource=admin',['Users','Locations']);
-app.use(express.static('public'));
+app.use(express.static(__dirname+'/public'));
 var path = require('path');
 
 app.set('views', path.join(__dirname, 'views'));
@@ -21,7 +21,7 @@ app.get('/login',function(req,res){
   if(err){
     res.send("Something went wrong!!")
   }
-  res.sendFile(__dirname+'/public/login.html');//The login page
+  res.sendFile(__dirname+'/public/index.html');//The login page
 })
 
 
@@ -29,8 +29,8 @@ app.get('/login',function(req,res){
 app.get('/loginsubmit',function(req,res){
 
     var usr_pas ={
-      Email :""+req.query.Email,
-      Password : ""+req.query.Password
+      Email :""+req.query.fname,
+      Password : ""+req.query.password
     }
     db.Users.find(usr_pas,function(err,data){
       if(err){
@@ -74,7 +74,7 @@ app.get('/signupsubmit',function(req,res){
             console.log("Successfully inserted")
           })
         }
-        res.sendFile(__dirname+'/public/login.html');
+        res.sendFile(__dirname+'/public/index.html');
       }
     })
 
@@ -88,11 +88,6 @@ app.get('/logout',function(req,res){
   res.sendFile(__dirname+'/public/loggedout.html')//logout page
 })
 
-
-
-
-
-
-app.listen('4096',function(){
+app.listen('4106',function(){
   console.log("It's working!!")
 })

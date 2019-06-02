@@ -71,7 +71,7 @@ li {
 .grid1 {
     grid-column: 1/6;
     background-color: rgb(230, 105, 105);
-    height: 37.3rem;
+    height: 100vh;
 }
 
 .grid2 {

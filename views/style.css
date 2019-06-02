@@ -1,3 +1,6 @@
+body{
+  margin:auto 0;
+}
 h1 {
     color: darkblue;
     margin: 10px 350px;
@@ -5,7 +8,9 @@ h1 {
     font-size: 70px;
 }
 
-
+.welcome{
+  background-color:
+}
 
 .btn {
     display: flex;
@@ -90,4 +95,3 @@ body {
 .details p {
     margin: 30px;
 }
- 
