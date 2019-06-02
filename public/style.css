@@ -1,28 +1,38 @@
 h1 {
-    color: darkblue;
-    margin-left: 350px;
+    color: white;
+    margin-left: 50px;
+    margin-right: 50px;
     margin-top: 100px;
     font-family: "Comic Sans MS", cursive, sans-serif;
     font-size: 50px;
 }
 
 p {
-    margin-left: 450px;
+    margin-left: 50px;
     margin-top: 15px;
+    color: white;
+    font-size: 20px;
+    text-shadow: 0 0 30px black;
 }
 
 
 .btn {
     display: flex;
     justify-content: center;
+
 }
 
 button {
-    border-radius: 5px;
+    border-radius: 10px;
     border: 1px solid grey;
     color: rgb(8, 100, 43);
-    height: 35px;
-    width: 120px;
+    height: 46px;
+    width: 250px;
+    border-color: rgb(189, 183, 183);
+}
+
+button a {
+    text-decoration: none;
 }
 
 nav {
@@ -50,4 +60,48 @@ ul {
 
 li {
     margin: 5px;
+}
+
+.grids {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+}
+
+.grid1 {
+    grid-column: 1/6;
+    background-color: rgb(230, 105, 105);
+    height: 598px;
+}
+
+.grid2 {
+    display: flex;
+    grid-column: 6/12;
+    background-color: white;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 120px;
+    margin-right: 120px;
+}
+
+body {
+    margin: auto 0;
+}
+
+input {
+    height: 46px;
+    width: 250px;
+    border: rgb(180, 179, 179) solid;
+    border-width: 1px;
+    border-radius: 10px;
+    margin: 10px;
+}
+input:hover {
+    filter: drop-shadow(0 0 0.50rem rgb(194, 194, 194));
+    cursor: pointer;
+}
+
+button:hover {
+    filter: drop-shadow(0 0 0.50rem rgb(194, 194, 194));
+    cursor: pointer;
 }
