@@ -81,6 +81,12 @@ app.get('/signupsubmit',function(req,res){
   //insert to db and go to login page
 })
 
+app.get('/addprojectsubmit',function(req,res){
+  var project = {
+    
+  }
+})
+
 app.get('/logout',function(req,res){
   if(err){
     res.send("Something went wrong")
