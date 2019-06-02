@@ -5,7 +5,7 @@
         <meta charset ="utf-8">
         <title>Project Finder</title>
         <link href="style.css" rel="stylesheet" type="text/css">
-            
+
     </head>
 
     <body>
@@ -15,10 +15,39 @@
 
         <div class="details">
             <b>
-            <p>email me at: xyz@abc.com</p>
+            <p>email me at : xyz@abc.com</p>
             <p>phone number:</p>
-            <p>my location</p>
+            <p>my location :</p>
             </b>
+        </div>
+        <div class="locmap">
+          <script type="text/javascript">
+            //Instantiateamapandplatformobject:
+            varplatform=newH.service.Platform({
+              'app_id':'{1LX2jlfjsYQWcd4BokH9}',
+              'app_code':'{Hn6bzttOyAsAEMlI44fRLg}'
+            });
+              //Retrievethetargetelementforthemap:
+              vartargetElement=document.getElementById('mapContainer');
+              //Getdefaultmaptypesfromtheplatformobject:
+              vardefaultLayers=platform.createDefaultLayers();
+              //Instantiatethemap:
+              varmap=newH.Map(document.getElementById('mapContainer'),defaultLayers.normal.map,{
+                zoom:10,
+                center:{lat:52.51,lng:13.4}
+              });
+              //Createtheparametersforthelandmarksearchrequest:
+              varlandmarkSearchParameters={searchText:'ORD'};
+              //Defineacallbackfunctiontoprocessthesearchresponse:
+              functiononSuccess(result){
+                varlocation=result.Response.View[0].Result[0].Place.Locations[0];
+                //Createaninfobubbleattheretrievedlocationwiththe//location'snameascontents:
+                ui.addBubble(newH.ui.InfoBubble({lat:location.DisplayPosition.Latitude,lng:location.DisplayPosition.Longitude},{content:location.Name}));};
+                //Getaninstanceofthegeocodingservice:
+                vargeocoder=platform.getGeocodingService();
+                //Callthegeocodemethodwiththesearchparameters,//thecallbackandanerrorcallbackfunction(calledifa//communicationerroroccurs):
+                geocoder.search(landmarkSearchParameters,onSuccess,function(e){alert(e);});
+          </script>
         </div>
     </body>
 
