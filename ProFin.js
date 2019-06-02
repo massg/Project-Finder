@@ -83,8 +83,25 @@ app.get('/signupsubmit',function(req,res){
 
 app.get('/addprojectsubmit',function(req,res){
   var project = {
-
+    Description: ""+req.query.prodes,
+    category: ""+req.query.category
   }
+  db.Locations.find(project,function(err,data){
+    if(err){
+      res.send("Something went wrong!!")
+    }
+    else{
+      if(data.length>0){
+      res.send("Project is already added!!");
+      }
+      else{
+        db.Locations.insert(usr_data,function(err,data){
+          console.log("Successfully added")
+        })
+      }
+      res.sendFile(__dirname+'/public/dashboard.html');
+    }
+  })
 })
 
 app.get('/logout',function(req,res){
@@ -94,6 +111,6 @@ app.get('/logout',function(req,res){
   res.sendFile(__dirname+'/public/loggedout.html')//logout page
 })
 
-app.listen('4108',function(){
+app.listen('4116',function(){
   console.log("It's working!!")
 })
